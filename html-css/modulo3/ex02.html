@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centralizando caixas</title>
     <style>
-        .conteiner{
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .conteiner {
             height: 600px;
             background-color: purple;
             padding: 10px;
-            position: relative;
-            background-image: url(/html-css/modulo3/img/target001.png);
-            background-size: 100% 100%;
-            
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
         }
-        .conteiner-article{
-            height: 300px;
-            width: 300px;
+
+        .conteiner-article {
+            height: 200px;
+            width: 200px;
             background-color: rgb(7, 176, 255);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            background-image: url(/html-css/modulo3/img/target001.png);
-            background-size: 100% 100%; 
-            transform: translate(-50%, -50%);
+            border-radius: 10px;
         }
     </style>
 </head>
+
 <body>
     <section class="conteiner">
-        <article class="conteiner-article">
-            
-        </article>
+        <article class="conteiner-article"></article>
+        <article class="conteiner-article"></article>
+        <article class="conteiner-article"></article>
+        <article class="conteiner-article"></article>
     </section>
 </body>
+
 </html>
