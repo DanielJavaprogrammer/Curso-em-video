@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Big Tables</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman';
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        th {
+            background-color: lightblue;
+            position: sticky;
+            top: -1px;
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 3px;
+
+        }
+
+        tbody>tr:nth-child(2n) {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Table{
+        CAPTION - Titulo
+        thead - cabecalho (usar tr e th)
+        tbody - corpo (usar tr e td)
+        tfoot - rodape (tr e td)
+
+        th serve para titulo
+        td serve para dados
+
+        scope: Se a informacao do titulo ficar na mesa coluna, usar "scope="col". Se tiver na mesma linha usar "scope="row"
+    }-->
+
+    <table>
+        <caption>Tamanhos de penis no Brasil</caption>
+        <thead>
+            <th scope="col">Nome</th>
+            <th scope="col">Tamanho</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>14cm</td>
+            </tr>
+            <tr>
+                <td>Tiago</td>
+                <td>19cm</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>16cm</td>
+            </tr>
+            <tr>
+                <td>Joao</td>
+                <td>16cm</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Media</th>
+                <td>15cm</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
