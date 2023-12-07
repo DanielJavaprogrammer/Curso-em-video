@@ -29,6 +29,7 @@ main {
 section#phone {
     background: url(imagens/frame-iphone.png);
     background-repeat: no-repeat;
+
     width: 305px;
     height: 624px;
     position: absolute;
@@ -75,6 +76,7 @@ section#midias img:hover {
     /*Timinuindo tamanho dos icones*/
     section#midias img {
         width: 3rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     /*Centralizando os icones*/
@@ -88,18 +90,17 @@ section#midias img:hover {
 
     /*Iphone*/
     section#phone {
-        background-size: 250px;
+        background-size: 230px;
         background-position: center;
-        height: 500px;
+        height: 540px;
 
     }
 
     /*Iframe*/
     iframe {
-        top: 62px;
-        left: 44px;
-        width: 216px;
-        height: 379px;
-
+        top: 6.063rem;
+        left: 3.375rem;
+        width: 12.375rem;
+        height: 21.813rem;
     }
 }
