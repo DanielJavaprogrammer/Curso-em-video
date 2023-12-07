@@ -76,7 +76,7 @@ section#midias img:hover {
         flex-direction: row;
         justify-content: center;
         padding-left: 50px;
-}
+    }
 
     section#phone {
         background-size: 250px;
