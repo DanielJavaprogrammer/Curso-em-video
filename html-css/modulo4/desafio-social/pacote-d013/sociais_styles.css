@@ -12,6 +12,8 @@ button {
     width: 100%;
     height: 60px;
     color: aliceblue;
+    border: none;
+    margin-top: -3px;
 }
 
 a {
@@ -28,4 +30,8 @@ button:hover {
 
 }
 
-@media screen and (max-width: 817px) {}
+@media screen and (max-width: 540px) {
+    button {
+        height: 45px;
+    }
+}
