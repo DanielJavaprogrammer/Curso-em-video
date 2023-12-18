@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h2>Formulario</h2>
+
+    <form action="cadastro.php" method="post">
+        <div>
+            <label for="iusu"> Usuario: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10">
+            <!--Usar o atributo required para obrigar o usuario a digitar o dado solicitado.-->
+            <!--Usar o minlenght para quantidade minima de caractere e maxlenght para caractere maximo.-->
+            <!--O atributo Size altera o tamanho do input-->
+            <!--Placeholder serve para colocar um nome na caixinha de input-->
+            <!--O atributo "autocomplit on ou off(isto na tag Form)" liga ou desliga o autocompletar.-->
+            <!--Usar autocomplete nos input te da mais opcoes de autocompletar.. tipo senha, usuario, novas senhas e etc.-->
+        </div>
+
+        <div>
+            <label for="ipass"> Senha: </label>
+            <input type="password" name="pass" id="ipass" required minlength="8" maxlength="20">
+        </div>
+
+        <div>
+            <input type="submit" id="enviar" value="Enviar">
+            <input type="reset" value="Limpar" id="reset">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -8,7 +8,32 @@
 </head>
 
 <body>
+    <h1>Formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <div>
+            <label for="inome">Nome</label>
+            <!--O uso do label e melhor porque vincula o nome com o input de referencia.-->
+            <input type="text" name="nome" id="inome"></p>
+            <!--O uso do "name" se aplica melhor para o PHP e o "id" para o Java script-->
+        </div>
 
+        <div>
+            <label for="isobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="isobrenome"> </p>
+            <input type="submit" value="Enviar"> </p>
+            <!--Input Submit serve para "enviar os dados". O "value", seria apenas o nome que fica no botao criado neste input submit.-->
+        </div>
+    </form>
+
+    <!--
+        Usar method "get" quando os dados que serao enviados nao sao sensiveis. Nao usar para senhas, dados como cpf, rg.
+        Com o GET, o maximo de caractere e de 3000.
+    -->
+    <!--
+        Usar method "post" para esconder os dados da URL (mas da pra ver no devtools na aba network). Aceita mais de 3000 caracteres. 
+        Nao usar para dados sensiveis tambem. Necessario aprender criptografia de dados com HTTPs.
+        Para envio de arquivos, tabmbem usa o method="Post"
+    -->
 </body>
 
 </html>
