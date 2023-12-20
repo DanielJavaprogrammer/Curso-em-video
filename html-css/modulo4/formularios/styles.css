@@ -87,10 +87,10 @@ h1 {
     background: linear-gradient(to right, #8B008B, #40E0D0);
 }
 
-p {
+.p_form {
     font-size: 0.8rem;
-    margin-top: -19px;
     text-align: center;
+    margin-top: -19px;
     padding-bottom: 20px;
 }
 
@@ -186,4 +186,54 @@ h1 {
 #btn_sign:hover {
     cursor: pointer;
     background: linear-gradient(to right, #8B008B, #40E0D0);
+}
+
+.check {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#icheck {
+    margin-right: 15px;
+}
+
+.p_login {
+    font-size: 0.8rem;
+}
+
+/* Seleciona o input de data pelo id */
+#data {
+    /* Define a largura como 200 pixels */
+    width: 200px;
+    /* Define a altura como 30 pixels */
+    height: 30px;
+    /* Define a borda como 2 pixels sólidos na cor azul */
+    border: 2px solid rgba(0, 0, 255, 0.233);
+    /* Define o raio da borda como 10 pixels */
+    border-radius: 10px;
+    /* Define o espaçamento interno como 5 pixels */
+    padding: 5px;
+    /* Define o fundo como branco */
+    background: white;
+    /* Define a cor do texto como preto */
+    color: black;
+    /* Define o tamanho da fonte como 16 pixels */
+    font-size: 16px;
+    /* Define a fonte como Arial */
+    font-family: Arial;
+}
+
+/* Seleciona o input de data quando o usuário passar o mouse */
+#data:hover {
+    /* Define a borda como 2 pixels sólidos na cor verde */
+    border: 2px solid rgba(0, 0, 255, 0.393);
+}
+
+/* Seleciona o input de data quando o usuário clicar */
+#data:focus {
+    /* Define a borda como 2 pixels sólidos na cor vermelha */
+    border: 2px solid rgba(255, 0, 0, 0.484);
+    /* Remove o contorno padrão do navegador */
+    outline: none;
 }
