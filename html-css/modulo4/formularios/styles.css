@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    background-color: rgb(240, 239, 239);
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+
+    min-width: 380px;
+    height: auto;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(39, 39, 39);
+    padding-top: 60px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 25px;
+    width: 280px;
+    margin-top: -20px;
+
+}
+
+.input_text {
+    border: none;
+    border-bottom: 1.6px solid rgba(128, 128, 128, 0.603);
+    padding: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: rgb(56, 56, 56);
+}
+
+::placeholder {
+    color: rgba(128, 128, 128, 0.884);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.button {
+    height: 50px;
+    border: transparent;
+    border-radius: 28px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(to right, #40E0D0, #8B008B);
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+    max-width: 100%;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #8B008B, #40E0D0);
+}
+
+p {
+    font-size: 0.8rem;
+    margin-top: -19px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #2aa094;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #34c4b5;
+    text-shadow: 0px 0px 2px rgba(221, 215, 213, 0.897);
+}
+
+abbr {
+    text-decoration: none;
+}
+
+/*login*/
+
+.conteiner_sign {
+    width: 31.25rem;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 24px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+    height: auto;
+    border-radius: 13px;
+
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form_login_name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_idade {
+    columns: 2;
+}
+
+.sexo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.senha {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_name {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: auto;
+    height: 8rem;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+
+.img_logo {
+    width: 70px;
+    object-fit: contain;
+}
+
+.botao {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+#btn_sign {
+    border: transparent;
+    border-radius: 28px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(to right, #40E0D0, #8B008B);
+    font-size: 15px;
+    font-weight: 600;
+    max-width: 300px;
+    padding: 16px 90px;
+}
+
+#btn_sign:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #8B008B, #40E0D0);
+}

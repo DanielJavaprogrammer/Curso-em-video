@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../formularios/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="main">
+        <section class="conteiner_sign">
+            <div class="logo_name">
+                <img src="Design sem nome.png" alt="" class="img_logo">
+                <h1>Crie sua conta</h1>
+            </div>
+
+            <form class="form_login" method="post" autocomplete="off">
+                <div class="form_login_name">
+                    <div class="form_name">
+                        <label for="inome"></label>
+                        <input type="text" name="nome" id="inome" placeholder="Digite seu nome" required
+                            class="input_text">
+                    </div>
+                    <div class="form_email">
+                        <label for="iemail"></label>
+                        <input type="text" name="email" id="iemail" placeholder="Digite seu email" required
+                            class="input_text">
+                    </div>
+                </div>
+
+                <div class="form_idade">
+                    <div>
+                        <label for="data">Data de nascimento</label>
+                        <input type="date" name="data" id="data" required>
+                    </div>
+
+                    <div class="sexo">
+                        <div class="sexo.op">
+                            <label for="imasc">Masculino</label>
+                            <input type="radio" name="sexo" id="imasc" value="M" required>
+                        </div>
+
+                        <div>
+                            <label for="ifemi">Feminino</label>
+                            <input type="radio" name="sexo" id="ifemi" value="F" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="senha">
+                    <div class="seha.op">
+                        <label for="isenha"></label>
+                        <input type="password" name="senha" id="isenha" class="input_text" required placeholder="Senha">
+                    </div>
+
+                    <div class="seha.op">
+                        <label for="isenha"></label>
+                        <input type="password" name="senha" id="isenha" class="input_text" required
+                            placeholder="Digite a senha novamente">
+                    </div>
+                </div>
+
+                <div class="botao">
+                    <button type="submit" value="Entrar" id="btn_sign">Entrar</button>
+                </div>
+                <p>Ja possui uma conta? <a href="#"><abbr title="Acesse sua conta agora mesmo!">Entrar</abbr></a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </section>
+</body>
+
+</html>
