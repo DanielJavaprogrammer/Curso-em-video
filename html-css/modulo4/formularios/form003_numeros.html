@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>TEste de Formulario</h1>
+    <div class="form">
+        <form action="cadastro.js" method="get" autocomplete="on">
+            <div>
+                <label for="inome">Nome</label>
+                <input type="text" name="name" id="inome" required maxlength="30">
+                <!--O atributo maxlength, indica a quantidade maxima aceita de caractere. Para o minimo, seria o minlength-->
+            </div>
+
+            <div>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 à 10" step="0.1">
+            </div>
+            <!--O atributo "min e max" nesta neste input number, indica ate que numero sera aceito na caixa.-->
+            
+            <div class="mes">
+                <label for="imes">Periodo letivo</label>
+                <input type="month" name="mes" id="imes" value="2023-12">
+                <!--O atributo VALUE no input, e possivel deixar um valor ja pre deerminado, que pode ser alterado caso nao seja o desejado-->
+            </div>
+
+            <!--O input Type Month, solicita apenas mes e ano-->
+            <div>
+                <label for="idata">Data da prova</label>
+                <input type="date" name="data" id="idata">
+                <!--O input Type Data, solicita dia, mes e ano-->
+            </div>
+
+
+        <div class="hora">
+            <label for="ihora">Hora da prova</label>
+            <input type="time" name="hour" id="hora">
+        </div>
+
+            <div class="buttons">
+                <input type="submit" value="Enviar"> <!--Botao para enviar formulario-->
+                <input type="reset" value="Limpar"> <!--Botao para limpar tudo-->
+            </div>
+        </form>
+    </div>
+</body>
+</html>
