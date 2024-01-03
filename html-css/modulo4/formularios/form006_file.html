@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anexando arquivo</title>
+</head>
+<body>
+    <!--Quando tiver a opção de enviar uma foto, sempre usar o Method Post.-->
+    <form action="cadastro.js" method="post">
+        <p>
+            <label for="icolor">Selecione a cor: </label>
+            <input type="color" name="color" id="icolor">
+        </p>
+
+        <p>
+            <label for="irange">Escolher: </label>
+            <input type="range" name="range" id="irange" min="1" max="5" value="2">
+            <!--O value, faz com que ja começe com o 2 selecionado-->
+            <!--O min e max, usa-se pra saber apartir de que numero e o maximo ir.-->
+        </p>
+        <p>
+            <label for="ifile">Anexe sua Foto</label>
+            <input type="file">
+        </p>
+
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>

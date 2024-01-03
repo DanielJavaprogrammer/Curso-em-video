@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckBox Input form</title>
+</head>
+<body style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    
+    <form action="cadastro.php">
+        <div class="text"><h1>Cadastre-se agora mesmo</h1></div>
+
+        <fieldset>
+            <legend>Tipe your Sex</legend>
+            <input type="radio" name="sexo" id="isexmasc" value="M"><label for="isexmasc">Masculino</label> <br>
+            <input type="radio" name="sexo" id="isexfem" value="F"><label for="isexfem">Feminino</label> <br>
+        </fieldset>
+
+        <!--Coments
+
+        - Lembre-se de sempre testar seus formularios.
+        - Tente executar este padrao para sexo (input type="radio" name="sexo" id="isexmasc" value="M"><label for="isexmasc">Masculino</label> <br>)
+        - a propriedade Checked serve para ja deixar marcado a opcao. Opcao muito usada quando o cliente faz contrato e ja fica marcado a opcao de receber email de ofertas.
+        - Quando usado o Type Radio, o name precisa estar igual, senao, quando marcar uma opcao e depois a outra, nao tem como desmarcar.
+        - Usar o Label como o mesmo nome do Id do input para que quando clicar no nome a caixinha tambem marque.
+    -->
+
+
+        <fieldset> <!--Esta tag agrupa os itens. Fica tipo uma borda envolta do formulario-->
+            <legend>Favorites Sports</legend>
+            <input type="checkbox" name="esbas" id="iesbas"><label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut" checked>Futebol</label> <br>
+            <input type="checkbox" name="esnata" id="iesnata"><label for="iesnata">Natacao</label> <br>
+            <input type="checkbox" name="estenis" id="iestenis"><label for="iestenis">Tenis</label> <br>
+            <input type="checkbox" name="estenis" id="iesvolei"><label for="iesvolei">Voleibol</label> <br>
+        </fieldset>
+
+        <!--Estudar RegEx. Estudar espressoes regulares para entender essas regras.-->
+        <!--Estudar modelo HTML5 telefone pattern-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Refazer">
+        </p>
+    </form>
+
+</body>
+</html>
