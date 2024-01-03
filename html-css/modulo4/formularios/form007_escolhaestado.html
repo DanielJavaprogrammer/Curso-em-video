@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados</title>
+</head>
+<body>
+    <h1>Exemplo de formulario</h1>
+    <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <form action="cadastro.php" method="post"> <!--Usar metodo Posto quando temos dados com mais de 3000 bits-->
+        
+            <!--
+                - Usar este metodo para escolher uma cidade.
+                - A tag select e usada quando havera opcoes, uma lista quando clicada.
+                - Dentro da tag section, usar a tag Options com as opcoes, sendo Value a Sigla da informacao, e o nome desejado da opcao.
+                - Usar a opcao selected em uma das opcoes, faz com que fique predefinido a opcao.
+            -->
+            <p>
+                <label for="iestado">Estado: </label>
+                <select name="Estado" id="iestado">
+                    <option value="" selected>---Escolha---</option>
+                    <option value="AC">Acre</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceara</option>
+                    <option value="DF">Distrito Federal</option>
+                </select>
+            </p>
+             <!--
+                - A tag OPTGROUP com o complemento do LABEL, faz com que as opcoes sejam separadas por grupo na mesma lista.
+            -->
+            <p>
+                <label for="icidade">Cidade: </label>
+                <select name="cidade" id="icidade">
+                    <optgroup label="Regial Sul">
+                        <option value="SP">Sao Paulo</option>
+                        <option value="CP" selected>Capao Redondo</option>
+                        <option value="BL">Brasilandia</option>
+                        <option value="SA">Santo Amaro</option>
+                        <option value="JM">Jardim Miria</option>
+                    </optgroup>
+                        <optgroup label="Regial Norte">
+                            <option value="LP">Lapa</option>
+                            <option value="BF">Barra Funda</option>
+                            <option value="CC">cercadihdo</option>
+                            <option value="PD">Perdizes</option>
+                            <option value="VL">Villa-Lobos</option>
+                        </optgroup>
+                </select>
+            </p>
+             <!--
+                - Para fazer com que apareca opcoes, mas tambem seja possivel digitar quando nao encontrar a opcao, usar o input normal para criar o espaco a ser preenchido, e criar a tag DATALIST (DATAL), e adicionar em OPTIONS as opcoes desejadas.
+                - Usar na tag DATALIST  um id e no input adicionar um atributo chamado LIST  com o mesmo nome do id.
+            -->
+            <p>
+                <label for="iprof">Profissao: </label>
+                <input type="text" name="prof" id="iprof" list="listaprof">
+                <datalist id="listaprof">
+                    <option>Administrador</option>
+                    <option>Cabeleireiro</option>
+                    <option>Dentista</option>
+                    <option>Zelador</option>
+                </datalist>
+            </p>
+             <!--
+                - Para criar um espaco com textos usar a tag TEXTAREA.
+                - Para definir um limite de caracteres, usar o MAXLENGTH seguido do numero maximo de caractere permitido.
+            -->
+            <p>
+                <label for="imsg">Mensagem: </label><br>
+                <textarea name="msg" id="imsg" cols="50" rows="10" maxlength="2000"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </form>
+    </fieldset>
+</body>
+</html>
