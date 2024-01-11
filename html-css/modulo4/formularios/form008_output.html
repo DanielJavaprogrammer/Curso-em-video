@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacao - Outpot</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Calculando um número</legend>
+        <form action="#">
+            <!-- Entrada do primeiro número -->
+            <p>
+                <label for="inum1">Numero 1: </label>
+                <input type="number" name="num1" id="inum1" required
+                    oninput="inum.innerHTML = Number(inum1.value) + Number(inum2.value)">
+                <!-- O resultado da soma será exibido aqui -->
+                <output id="inum">0</output>
+            </p>
+    
+            <!-- Entrada do segundo número -->
+            <p>
+                <label for="inum2">Numero 2: </label>
+                <input type="number" name="num2" id="inum2" required
+                    oninput="inum.innerHTML = Number(inum1.value) + Number(inum2.value)">
+            </p>
+    
+            <!-- Saída do resultado -->
+            <p>
+                <label for="outp">Resultado: </label>
+                <output id="inum">0</output>
+            </p>
+    
+            <!-- Controle deslizante para a idade -->
+            <p>
+                <label for="idadeRange">Sua idade: </label>
+                <input type="range" name="idadeRange" id="idadeRange" required min="1" max="10" value="5"
+                    oninput="ival.innerHTML = Number(idadeRange.value)">
+                <!-- O valor atual do controle deslizante será exibido aqui -->
+                <output id="ival">5</output>
+            </p>
+        </form>
+    </fieldset>
+    
+</body>
+
+</html>
