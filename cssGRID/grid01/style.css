@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.conteiner div {
+    background-color: royalblue;
+    padding: 1rem;
+    border-radius: 5px;
+
+
+}
+
+.conteiner div:nth-child(even) {
+    /* Seleciona os filhos pares (even). Para adicionar filhos impar, usar o 'odd' */
+    background-color: skyblue;
+}
+
+.conteiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Determina quantas colunas e seu tamanho */
+    /* grid-template-rows: repeat(3, 1fr);*/
+    /* Determina quantas linhas e seu tamanho */
+    grid-gap: 10px;
+    /* Espaco entre os elementos */
+    grid-auto-rows: 200px;
+    /* */
+    /*esse atributo faz com que se adicionado mais divs, ela pegue o tamanho selecionado. Neste caso, 200px*/
+    padding: 20px;
+}
+
+/* Para expecificar as linhas e colunas, podemos usar a sintaxe:
+    grid-template-columns: 200px 200px 200px;
+
+    Ou pedemos usar o 'repeat':
+    grid-template-columns: repeat(3, 200px);
+
+    Ou seja, repita 3 vezes o tamanho 200px na coluna. O mesmo se aplica ao Row.
+
+    Tambem temos o minmax, que determina o tamanho minimo, seguido do maximo.. ou seja, tamanho nao vai passar de 700px e nao sera menor que 500px no exemplo abaixo.
+
+    grid-template-columns: minmax(500px, 700px);
+
+    Para carater de responsividade, o melhor a se usar e o FR, como no exemplo a seguir: 
+
+    grid-template-columns: repeat(3, 1fr);
+    Ou seja, serao 3 colunas que ocuparao 1 fracao de espaco disponivel na tela, cada.
+
+    ALINHAMENTO:
+    justify-items: center;
+    align-items: center;
+
+    Alinhamento de uma celular em expecifico
+    .conteiner div:nth-child(5) { "o numero em parenteses determina a celula aser alterada"
+    align-self: center;
+    justify-self: end;
+}
+
+*/
