@@ -1,1 +1,6 @@
 /* Estilo para aparelho na vertical (Portrait)*/
+
+html{
+    background-image: url(../imgs/portrait.png)
+    
+}

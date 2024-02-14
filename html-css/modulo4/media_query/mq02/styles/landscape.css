@@ -1,1 +1,5 @@
 /* Estilo para aparelho na horizontal (Landscape)*/
+
+html{
+    background-image: url(../imgs/Landscape.png)
+}
