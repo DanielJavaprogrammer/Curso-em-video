@@ -14,10 +14,8 @@
 <body>
     <header>
         <h1>Meu Site</h1>
-        <span class="material-symbols-outlined">
-            menu
-        </span>
-        <nav>
+        <span id="icone" class="material-symbols-outlined" onclick="menuButton()">menu</span>
+        <nav id="menu">
             <ul>
                 <li>Opção 1</li>
                 <li>Opção 2</li>
@@ -58,4 +56,20 @@
     </main>
 </body>
 
+
 </html>
+
+<!--
+<script>
+    function menuButton() {
+        menu.style.display = 'block';
+    }
+</script>
+-->
+
+<script>
+    function menuButton() {
+        var menu = document.getElementById("menu");
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+</script>
