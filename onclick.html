@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Learning</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sec {
+            background-color: rgb(63, 80, 80);
+            width: 200px;
+            text-align: center;
+            padding: 30px;
+            color: #fff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text" class="sec">
+        <p>Laranja</p>
+        <button class="btn" onclick="alternarCor()">Mude a cor para Laranja</button>
+    </div>
+
+    <div id="size" class="sec">
+        <p>20px</p>
+        <button class="btn" onclick="alternarTamanho()">Mude o tamanho da fonte para 20px</button>
+    </div>
+
+</body>
+
+<script>
+    var corLaranjaAtiva = false;
+    var tamanho20pxAtivo = false;
+
+    function alternarCor() {
+        var text = document.getElementById("text");
+        corLaranjaAtiva = !corLaranjaAtiva; // Inverte o estado
+        text.style.color = corLaranjaAtiva ? "orange" : "white"; // Se ativo, laranja; se não, branco
+    }
+
+    function alternarTamanho() {
+        var size = document.getElementById("size");
+        tamanho20pxAtivo = !tamanho20pxAtivo; // Inverte o estado
+        size.style.fontSize = tamanho20pxAtivo ? "20px" : "inherit"; // Se ativo, 20px; se não, tamanho padrão
+    }
+</script>
+
+</html>

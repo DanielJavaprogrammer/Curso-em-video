@@ -24,7 +24,7 @@ header h1 {
 
 nav {
     background-color: gray;
-    display: none;
+    display: block;
 }
 
 nav ul {
@@ -33,7 +33,7 @@ nav ul {
     list-style: none;
     color: #fff;
     font-weight: 600;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0;
     text-align: center;
 }
@@ -78,7 +78,7 @@ p {
 
 #icone {
     cursor: pointer;
-    display: block;
+    display: none;
     text-align: center;
     padding: 5px;
     background-color: gray;
@@ -88,7 +88,8 @@ p {
     background-color: #fff;
 }
 
-
-@media screen and (max-width: 600px) {
-    nav ul {}
+@media screen and (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+    }
 }
