@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vai  me mamar ou não?</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div{
+            width: 1000px;
+            background-color: rgba(0, 0, 255, 0.425);
+            padding: 30px;
+            text-align: center;
+            color: #fff;
+            border-radius: 50px;
+        }
+        #text{
+            font-size: 2rem;
+            display: none;
+        }
+
+        button{
+            padding: 20px;
+            background-color: blue;
+            font-weight: 700;
+            border-radius: 20px;
+            color: white;
+            font-size: 2rem;
+            border: none;
+        }
+        button:hover{
+            background-color: white;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .btn{
+            padding: 5px;
+            background-color: blue;
+            font-weight: 700;
+            border-radius: 5px;
+            color: white;
+            font-size: rem;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <button onclick="aparText()">Aperte este botão</button>
+        <div id="text">VIDA, COLOCA A BOCA NO  MEU PAU? ELE TE QUER. <br>
+            <input class="btn" type="button" value="SIM">
+            <input class="btn" type="button" value="NÃO">
+        </div>
+
+    </div>
+
+    <script>
+        var buttonAtivo = false
+        function aparText(){
+            var text = document.getElementById("text")
+            buttonAtivo = !buttonAtivo;
+            
+            if(buttonAtivo){
+                text.style.display = "block"
+            }
+            else{
+                text.style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>

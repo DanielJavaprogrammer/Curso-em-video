@@ -42,19 +42,28 @@
 </body>
 
 <script>
+    var texto = prompt("Digite seu nome: ");
+    document.write("Seu nome é " + texto +".");
+
     var corLaranjaAtiva = false;
     var tamanho20pxAtivo = false;
 
     function alternarCor() {
         var text = document.getElementById("text");
         corLaranjaAtiva = !corLaranjaAtiva; // Inverte o estado
-        text.style.color = corLaranjaAtiva ? "orange" : "white"; // Se ativo, laranja; se não, branco
+
+        if(corLaranjaAtiva){
+            text.style.color = "orange";
+        }
+        else{
+            text.style.color = "white";
+        }
     }
 
     function alternarTamanho() {
         var size = document.getElementById("size");
         tamanho20pxAtivo = !tamanho20pxAtivo; // Inverte o estado
-        size.style.fontSize = tamanho20pxAtivo ? "20px" : "inherit"; // Se ativo, 20px; se não, tamanho padrão
+        size.style.fontSize = tamanho20pxAtivo ? "20px" : "inherit"; // Sintaxe: condição ? "valor1" : "valor2"; Se ativo, 20px; se não, tamanho padrão
     }
 </script>
 
