@@ -13,20 +13,34 @@
             align-items: center;
             font-size: 1rem;
             font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         div{
             width: 1000px;
-            background-color: rgba(0, 0, 255, 0.425);
-            padding: 30px;
             text-align: center;
-            color: #fff;
+            color: black;
             border-radius: 50px;
+            padding: 10px;
+            z-index: 0;
+            position: absolute;
+        }
+
+        ::-webkit-scrollbar{
+            width: 0;
+            height: 0;
         }
 
         #text{
-            font-size: 2rem;
+            width: auto;
+            font-size: 1rem;
             display: none;
+            border: none;
+            background-color: blueviolet;
+            margin-bottom: 10px;
         }
 
         button{
@@ -55,14 +69,24 @@
             border: none;
             text-decoration: none;
         }
-
+        
+        video{
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            object-fit: cover;
+        }
 
     </style>
 </head>
 <body>
+    <video autoplay loop>
+        <source src="degraded_-_119282 (720p).mp4">
+    </video>
     <div >
         <button onclick="aparText()">Aperte este botão</button>
-        <div id="text">VIDA, COLOCA A BOCA NO  MEU PAU? ELE TE QUER. <br>
+        <div id="text">
+            <p>VIDA, COLOCA A BOCA NO  MEU PAU? ELE TE QUER. <br></p>
             <a href="index.html"> SIM</a>
             <a href="index2.html">Não</a>
         </div>
