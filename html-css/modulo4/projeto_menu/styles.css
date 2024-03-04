@@ -57,3 +57,22 @@ li span{
     text-transform: uppercase;
     font-weight: 600;
 }
+
+.icone{
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .header_main{
+    width: 90%;
+    }
+
+    header nav ol{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    
+}
