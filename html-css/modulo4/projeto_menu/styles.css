@@ -1,21 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
+header {
     background-color: rgba(0, 0, 255, 0.308);
     font-family: 'Poppins', sans-serif;
 }
 
-.header_main{
+.header_main {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,34 +23,38 @@ header{
     margin: auto;
 }
 
-header img{
+header img {
     width: 80px;
     display: block;
 }
 
-#logoo{
+#logoo {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-header nav ol{
+nav {
+    display: none;
+}
+
+header nav ol {
     display: flex;
     gap: 50px;
+    flex-direction: row;
     justify-content: space-between;
     list-style: none;
     font-size: 1rem;
-    
 }
 
-header nav ol li:hover{
+header nav ol li:hover {
     cursor: pointer;
     transform: scale(1.05);
-    transition: .2s ;
-    text-shadow: -26px -3px 24px rgba(255,255,255,0.49);
+    transition: .2s;
+    text-shadow: -26px -3px 24px rgba(255, 255, 255, 0.49);
 }
 
-li span{
+li span {
     background-color: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 30px;
@@ -58,21 +62,53 @@ li span{
     font-weight: 600;
 }
 
-.icone{
-    display: none;
-}
 
-@media screen and (max-width: 1000px){
-    .header_main{
-    width: 90%;
+@media screen and (max-width: 1000px) {
+    .header_main {
+        width: 90%;
     }
 
-    header nav ol{
+    header nav ol {
         display: flex;
         gap: 20px;
     }
 }
 
-@media screen and (max-width: 700px){
-    
+@media screen and (min-width: 650px) {
+    #burger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header nav ol {
+        flex-direction: column;
+    }
+
+    nav {
+        position: absolute;
+        margin: 0;
+        left: 70%;
+        top: 12%;
+        height: 100vh;
+        background-color: rgba(0, 0, 255, 0.308);
+        padding: 15px;
+    }
+
+    span#burger {
+        position: absolute;
+        left: 80%;
+        background-color: rgb(211, 211, 211);
+        padding: 5px;
+        border-radius: 30px;
+    }
+
+    li span {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+    }
 }
