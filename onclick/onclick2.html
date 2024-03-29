@@ -13,82 +13,52 @@
             align-items: center;
             font-size: 1rem;
             font-family: Arial, Helvetica, sans-serif;
-            position: relative;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: rgb(32, 32, 32);
         }
-
-        div{
-            width: 1000px;
+        
+        .main{
+            padding: 50px;
+            max-width: 600px;
             text-align: center;
-            color: black;
-            border-radius: 50px;
-            padding: 10px;
-            z-index: 0;
-            position: absolute;
-        }
-
-        ::-webkit-scrollbar{
-            width: 0;
-            height: 0;
+            border: 1px outset white;
+            border-radius: 30%;
+            font-size: 2rem;
+            margin-left: 10px ;
+            margin-right: 10px;
+            background-color: #fff;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
         }
 
         #text{
-            width: auto;
-            font-size: 1rem;
+            color: #fff;
             display: none;
-            border: none;
-            background-color: blueviolet;
-            margin-bottom: 10px;
+            
         }
 
         button{
-            padding: 20px;
-            background-color: blue;
-            font-weight: 700;
-            border-radius: 20px;
-            color: white;
-            font-size: 2rem;
-            border: none;
-        }
-
-        button:hover{
-            background-color: white;
-            color: blue;
+            border-radius: 50px;
+            background: linear-gradient(to right, white, red, rgb(170, 72, 16)) ;
+            padding: 20px 80px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-shadow: .5px 1px black;
             cursor: pointer;
-        }
-
-        a{
-            padding: 5px;
-            background-color: blue;
-            font-weight: 700;
-            border-radius: 5px;
-            color: white;
-            font-size: rem;
-            border: none;
-            text-decoration: none;
-        }
-        
-        video{
-            width: 100%;
-            height: 100vh;
-            z-index: -1;
-            object-fit: cover;
         }
 
     </style>
 </head>
-<body>
-    <video autoplay loop>
-        <source src="degraded_-_119282 (720p).mp4">
-    </video>
-    <div >
+    <div id="main">
         <button onclick="aparText()">Aperte este botão</button>
         <div id="text">
             <p>VIDA, COLOCA A BOCA NO  MEU PAU? ELE TE QUER. <br></p>
             <a href="index.html"> SIM</a>
-            <a href="index2.html">Não</a>
+            ou
+            <a href="index2.html">NÃO</a>
         </div>
 
     </div>
@@ -96,7 +66,7 @@
     <script>
         var buttonAtivo = false
         function aparText(){
-            var text = document.getElementById("text")
+            var text = document.getElementById("main")
             buttonAtivo = !buttonAtivo;
             
             if(buttonAtivo){
@@ -105,7 +75,15 @@
             else{
                 text.style.display = "none"
             }
+
+            // if(buttonAtivo){
+            //     colorrhc.style.background == "red"
+            // }
+            // else{
+            //     colorrhc.style.background == "White"
+            // }
         }
+
     </script>
 </body>
 </html>
