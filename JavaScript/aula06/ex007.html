@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes com DOM</title>
+    <style>
+        #area {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area">
+        Interaga...
+    </div>
+
+    <!-- onclick serve para quando houver o click -->
+    <!-- onmouseenter serve para quando o mouse entrar na caixa -->
+    <!-- onmouseout serve para quando sair o mouse da caixa; -->
+
+
+    <script>
+        var aze = window.document.getElementById('area')
+        aze.addEventListener('click', clicar)
+        aze.addEventListener('mouseenter', entrou)
+        aze.addEventListener('mouseout', saiu)
+
+        /*Esse modo é para deixar o html limpo. No proprio java script voce criar os enventos usando o addEventListener, sendo que entre parenteses fica assim: ('click', clicar), o click é o envento de clicar, e o "clicar" o nome da função */
+
+        function clicar() {
+            aze.innerText = 'Clicou!'
+            aze.style.background = 'red'
+        }
+
+        function entrou() {
+            aze.innerText = 'Entrou!'
+        }
+
+        function saiu() {
+            aze.innerText = 'Saiu!'
+            aze.style.background = 'green'
+        }
+    </script>
+</body>
+
+</html>
