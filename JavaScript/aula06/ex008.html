@@ -5,13 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando numeros</title>
+    <style>
+        #res{
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgb(156, 156, 241);
+            align-items: center;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input{
+            width: 50px;
+            height: 50px;
+            
+        }
+
+        input:nth-child(2),input:nth-child(3){
+            font-size: 1.3rem;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Somando numeros</h1>
-    <input type="number" name="txt1" id="txt1">
+    <input type="number" name="txt1" id="txt1"> +
     <input type="number" name="txt2" id="txt2">
     <input type="button" value="Somar" onclick="somar()">
+    <button type="reset" onmouseenter="limpar()">Limpar</button>
+    <div id="res">
+        Resutado: 
+    </div>
+
+
+    <script>
+        function somar(){
+            var num1 = window.document.getElementById('txt1')
+            var num2 = window.document.getElementById('txt2')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+
+            var res = n1 + n2
+
+            var one = window.document.getElementById('res')
+            one.innerHTML = ('O resultado da soma e ' + res)
+        }
+
+        function limpar(){
+            var a = window.document.querySelector('button')
+            a.style.color = 'blue' 
+        }
+    </script>
 </body>
 
 </html>
