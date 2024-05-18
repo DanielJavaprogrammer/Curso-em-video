@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentando condicoes</title>
+    <style>
+        #res{
+            font-size: 1.5rem;
+            margin-top: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    Velocidade do carro:  <input type="number" name="speed" id="speed"> km/h 
+    <input type="button" value="Checar" id="button" onclick="tetarVel()">
+    <div id="res">
+
+    </div>
+
+    <h2>Nacionalidade</h2>
+    <p>
+        D
+    </p>
+    <input type="text" name="nasc" id="nasc">
+
+
+    <script>
+        function tetarVel(){
+            var num = window.document.getElementById('speed')
+            var res = window.document.getElementById('res')
+            var n1 = Number(num.value)
+
+            if (n1 > 60){
+                res.innerHTML = `Sua velicidade foi <strong>${n1}</strong>km/h. Voce foi multado.`
+            }
+            else{
+                res.innerHTML = `Tranquilo. Continue dirigindo com seguranca.`
+            }
+        }
+    </script>
+</body>
+</html>
