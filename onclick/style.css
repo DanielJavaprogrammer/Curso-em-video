@@ -8,6 +8,7 @@ body {
     max-width: 1440px;
     background-color: rgb(34, 34, 34);
     height: 100vh;
+    padding-inline: 20px;
 }
 
 #main-1 {
