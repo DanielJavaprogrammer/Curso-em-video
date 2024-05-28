@@ -1,7 +1,6 @@
-var nome = 'Daniel';
-var salario = 1200;
-var cargo = 'Gerente de compras';
+var senhaCorreta = 'Daniel123'
+var tentativasRes = 3
 
-console.log("Nome do funcionario: "+ nome);
-console.log("Ultimo do salario: " + salario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
-console.log("Cargo do Funcionario: "+ cargo);
+while (tentativasRes > 0){
+    if
+}

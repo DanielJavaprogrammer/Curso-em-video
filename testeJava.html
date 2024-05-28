@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JS</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .main {
+            background-color: lightcoral;
+            max-width: 500px;
+            padding: 50px;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form id="formulario" onsubmit="return false;">
+            <label for="pass">Digite sua senha</label>
+            <input type="password" name="passW" id="pass">
+            <input type="checkbox" id="showPassword"> Mostrar senha
+            <button type="button" onclick="checar()">Checar</button>
+            <p id="tentativa">Você tem 3 tentativas</p>
+        </form>
+    </div>
+
+    <script>
+        var passWord = "Daniel";
+        var tentativasRes = 3;
+
+        document.getElementById('showPassword').addEventListener('change', function () {
+            var senhaInput = document.getElementById('pass');
+            if (this.checked) {
+                senhaInput.type = 'text';
+            } else {
+                senhaInput.type = 'password';
+            }
+        });
+
+        function checar() {
+            var senha = document.getElementById("pass").value;
+            var textTent = document.getElementById("tentativa");
+
+            if (senha === passWord) {
+                textTent.innerHTML = "Senha Correta.";
+                textTent.style.color = "Green";
+            } else {
+                tentativasRes--;
+                textTent.innerHTML = "Senha Incorreta. ";
+                if (tentativasRes > 0) {
+                    textTent.innerHTML += `Você tem <strong>${tentativasRes}</strong> tentativas restantes.`;
+                    textTent.style.color = "Red";
+                } else {
+                    textTent.innerHTML += "Você excedeu o número de tentativas.";
+                    document.querySelector("button").disabled = true;
+                    textTent.style.color = "Red";
+                }
+
+                // Selecionar o texto digitado
+                var senhaInput = document.getElementById("pass");
+                senhaInput.select();
+                senhaInput.focus();
+            }
+        }
+    </script>
+</body>
+
+</html>
