@@ -1,14 +1,12 @@
-// Leitura dos valores de A, B e C
-const A = parseFloat(prompt("Digite o valor de A:"));
-const B = parseFloat(prompt("Digite o valor de B:"));
-const C = parseFloat(prompt("Digite o valor de C:"));
+const A = parseFloat(30);
+const B = 11;
+const C = 10;
 
-// Cálculo da soma entre A e B
-const somaAB = A + B;
+const somaAB = parseFloat(A + B);
 
-// Verificação se a soma é menor que C
 if (somaAB < C) {
-    console.log(`A soma entre A e B (${somaAB}) é menor que C (${C}).`);
-} else {
-    console.log(`A soma entre A e B (${somaAB}) não é menor que C (${C}).`);
+    console.log(`O resultado da soma é ${somaAB}. Então o valor é menor que C.`);
+}
+else {
+    console.log(`O resultado da soma é ${somaAB}. Então o valor é maior que C.`);
 }
