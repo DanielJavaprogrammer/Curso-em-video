@@ -1,3 +1,6 @@
+//Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo. 
+
+
 var x = parseInt(144)
 
 if (x % 2 === 0){
