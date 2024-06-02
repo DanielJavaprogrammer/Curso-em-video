@@ -1,6 +1,6 @@
 1 - Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B é mostre se a soma é menor que C. //FEITO
 
-2 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo.
+2 - Faça um algoritmo para receber um número qualquer e imprimir na tela se o número é par ou ímpar, positivo ou negativo. //FEITO
 
 3 - Faça um algoritmo que leia dois valores inteiros A e B, se os valores de A e B forem iguais, deverá somar os dois valores, 
 
@@ -27,9 +27,6 @@ de acordo com a tabela abaixo:
 Fórmula do IMC = peso / (altura) ²
 
 Tabela Condições IMC
-
-  
-
  Abaixo de 18,5   | Abaixo do peso          
 
  Entre 18,6 e 24,9 | Peso ideal (parabéns)  
