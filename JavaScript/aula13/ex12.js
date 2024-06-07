@@ -1,7 +1,6 @@
 var agora = new Date(); //Usar o "new Date" faz com que tenhamos as extas informações de dia e hora de hoje.
 var semana = agora.getDay(); // Nesse caso, o GetDay faz com que se tenha a data de hoje(dia da semana).. PAra optar por hora, mês e etc, é preciso trocar o "Day" por  "hour", "mounth" e etc
 // var semana = 7
-
 /*
     Dias da Semana no Java Script:
     0 = Domingo
@@ -10,9 +9,7 @@ var semana = agora.getDay(); // Nesse caso, o GetDay faz com que se tenha a data
     3 = Quarta-Feira
     5 = Sexta-Feira
     6 = Sabado
-
 */
-
 // console.log(semana)
 
 switch (semana) {

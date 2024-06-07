@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Opções</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .conteiner {
+            max-width: 300px;
+            min-width: 100px;
+            background-color: rgb(39, 108, 145);
+            padding: 30px;
+        }
+
+        .trabalhar,
+        .namorar,
+        .jogar {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="switches">
+            <div class="trabalhar">
+                <p>trabalhar</p>
+                <input type="checkbox" name="check" id="chk_tbh">
+            </div>
+            <div class="namorar">
+                <p>Namorar</p>
+                <input type="checkbox" name="check" id="chk_nmr">
+            </div>
+            <div class="jogar">
+                <p>Jogar</p>
+                <input type="checkbox" name="check" id="chk_jgr">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
