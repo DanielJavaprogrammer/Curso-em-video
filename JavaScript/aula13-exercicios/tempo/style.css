@@ -1,3 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(167, 167, 202);
+}
+
+.conteiner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(84, 84, 128);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 10px 30px black;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+.header,
+.horario{
+    padding-bottom: 10px;
+}
+
 .tempo-foto img{
     width: 200px;
     height: 200px;
