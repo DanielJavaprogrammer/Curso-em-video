@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relógio</title>
+    <title>Meu relogio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
 </head>
-<body onload="timeNow()">
-    <div class="container">
-        <header>
-            <h1>Relógio</h1>
-            <h2>Horário de Brasilia</h2>
-        </header>
 
-        <div id="cont-horas">
-            <div id="horas">
-            
-            </div>
-        </div>
-    </div>
+<body onload="updateTime()">
+    <section class="container">
+        <section class="header">
+            <p>Relogio</p>
+        </section>
+
+        <section class="clock">
+            <p>12:40</p>
+        </section>
+
+        <section class="options">
+            <ul>
+                <li>opção 1</li>
+                <li>opção 2</li>
+                <li>opção 3</li>
+                <li>opção 4</li>
+            </ul>
+        </section>
+    </section>
 
     <script src="script.js"></script>
 </body>
+
 </html>

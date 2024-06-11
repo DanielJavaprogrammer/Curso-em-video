@@ -1,12 +1,11 @@
+function updateTime() {
+    var hoje = new Date();
+    var hora = hoje.getHours().toString().padStart(2, '0');
+    var minutos = hoje.getMinutes().toString().padStart(2, '0');
+    var segundos = hoje.getSeconds().toString().padStart(2, '0');;
+    var clock = window.document.querySelector(".clock p");
+    clock.innerHTML = `${hora}<span class="pontos">:</span>${minutos}<span class="pontos">:</span>${segundos}`
 
-function timeNow() {
-    var showHoras = window.document.querySelector("#horas");
-
-    var horario = new Date();
-    var hora = horario.getHours();
-    var minutos = horario.getMinutes();
-
-    showHoras.innerHTML = `${hora}<span class="piscar">:</span>${minutos}`
 }
 
-setInterval(timeNow(1000));
+setInterval(updateTime, 1000)
