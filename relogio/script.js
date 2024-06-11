@@ -6,7 +6,7 @@ function timeNow() {
     var hora = horario.getHours();
     var minutos = horario.getMinutes();
 
-    showHoras.innerHTML = `${hora}<span>:</span>${minutos}`
+    showHoras.innerHTML = `${hora}<span class="piscar">:</span>${minutos}`
 }
 
-setInterval(timeNow(60000));
+setInterval(timeNow(1000));
