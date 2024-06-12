@@ -30,17 +30,22 @@ body {
 
 .header p {
     font-size: 4rem;
+
 }
+/* 
+.clock p {
+    font-size: 9rem;
+} */
 
 .clock {
     border-radius: 30px;
     background-color: grey;
-    font-size: 10vh;
-    padding: 20px 100px;
-    max-width: 100vh;
+    padding: 5px 20px;
+    max-width: 100%;
+    font-size: 100px;
 }
 
-.pontos {
+@media screen and (max-width:) .pontos {
     animation: piscar 1s infinite;
 }
 
