@@ -24,7 +24,6 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 100%;
     background-image: conic-gradient(from 0deg, red, orange, yellow, green, blue, indigo, violet, red);
-    animation: rotate-border 10s linear infinite;
 }
 
 .relogio {
