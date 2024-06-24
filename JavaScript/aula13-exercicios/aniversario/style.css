@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: lightsteelblue;
+    font-family: "Rubik", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+p {
+    margin-bottom: 20px;
+}
