@@ -10,10 +10,10 @@ function timeup() {
     var doisPontos = ":"
 
     if (relogio > 0 && relogio < 12) {
-        nome.innerHTML = `Agora são ${relogio}<span class="piscar">:</span>${minutos} hora(s)`;
+        nome.innerHTML = `Bom dia. Agora são ${relogio}<span class="piscar">:</span>${minutos} hora(s)`;
         fundo.style.backgroundColor = "#fffdcd"
     } else if (relogio >= 12 && relogio < 19) {
-        nome.innerHTML = `Agora são ${relogio}<span class="piscar">:</span>${minutos} hora(s)`;
+        nome.innerHTML = `Boa tarde. Agora são ${relogio}<span class="piscar">:</span>${minutos} hora(s)`;
         fundo.style.backgroundColor = "#f0ab50"
         img.src = "afternoon.jpg"
 

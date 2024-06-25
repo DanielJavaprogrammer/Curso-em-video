@@ -32,18 +32,11 @@
         function checar() {
             var current = new Date();
             var fullAno = current.getFullYear();
-            var ano = document.getElementById("year").value;
+            var ano = document.getElementById("year");
             var masc = document.getElementById("M");
             var femin = document.getElementById("F");
             var result = document.getElementById("images")
 
-            if (ano <= 0 || ano > fullAno) {
-                alert("Ocorreu um erro. Verifique novamente o ano digitado.");
-            }else{
-                if (masc.checked){
-                    masc.innerHTML = "hello"
-                } 
-            }
         }
     </script>
 </body>
