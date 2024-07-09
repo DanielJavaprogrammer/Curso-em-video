@@ -6,6 +6,12 @@
     <title>Testing Code</title>
 </head>
 <body>
-    hello world
+    <p>Horario de Brasilia: </p>
+    <script>
+        var hour = new Date();
+        var horas = hour.getHours();
+        var minutos = hour.getMinutes();
+        document.querySelector("p").innerText = `${horas} : ${minutes}`;
+    </script>
 </body>
 </html>
