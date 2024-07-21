@@ -4,47 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculando data de nascimento</title>
+    <title>Calculando Data de Nascimento</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
     <div class="container" id="container">
-        <label for="genM">Sexo: </label>
-        <input type="radio" name="gen" id="genM" value="Masculino"> Masculino
-        <input type="radio" name="gen" id="genF" value="Feminino"> Feminino
-        <input type="button" name="btn" id="btn" value="Enviar" onclick="Enviar()">
-    </div>
-
-    <div id="result">
-        <div id="foto">
-            <img src="menino.webp" alt="fotoMenino">
+        <div class="year-select">
+            <label>Idade: </label>
+            <input type="number" name="age" id="age" placeholder=" xxxx">
+        </div>
+    
+        <div class="gender-select">
+            <label for="genM">Sexo: </label>
+            <input type="radio" name="gen" id="genM" value="Masculino"> Masculino
+            <input type="radio" name="gen" id="genF" value="Feminino"> Feminino
+        </div>
+    
+        <div id="enviar">
+            <input type="button" name="btn" id="btn" value="Enviar" onclick="Enviar()">
+        </div>
+    
+        <div id="result">
+            <p> </p>
+            <div id="foto">
+                <img src="./images/idoso homem.jpg" alt="fotoMenino">
+            </div>
         </div>
     </div>
+    
+
     <script>
         function Enviar(){
-            var res = document.getElementById("result")
+            var res = document.querySelector("#result p");
             var masc = document.getElementById("genM");
-            var fem = document.getElementById("genF")
-            var img = document.querySelector("img")
+            var fem = document.getElementById("genF");
+            var foto = document.querySelector("#foto img");
+            var entAno = document.getElementById("age").value;
+            
+            /*Pegar ano atual*/
+            var data = new Date();
+            var ano = data.getFullYear();
+            var idade = (ano - entAno);
 
-            if (masc.checked){
-                
-                img.src= "menino.webp"
-                img.style.display = "block"
-             
-            }else if(fem.checked){
-                res.innerHTML = "Menina"
-                img.src= "menina.avif"
-            }else{
-                alert("Selecione o sexo.")
-                res.style.fontWeight = "800"
+            if(entAno <= 0 || entAno > ano){
+                alert("Ano digitado ou genero está incorreto. Revise e tente novamente.")
             }
-        }
+
+            res.innerHTML = "Sua idade é " + idade + " anos."
+
+            if (masc.checked) {
+                if (idade <= 2) {
+                    foto.src = "./images/bebe menino.png";
+                } else if (idade > 2 && idade <= 10) {
+                    foto.src = "./images/menino.webp";
+                } else if (idade > 10 && idade <= 17) {
+                    foto.src = "./images/jovem.webp";
+                } else if (idade > 18 && idade <= 49) {
+                    foto.src = "./images/homem adulto.webp";
+                } else if (idade >= 50) {
+                    foto.src = "./images/idoso homem.jpg";
+                }
+                foto.style.display = "block";
+            } else if (fem.checked) {
+                if (idade <= 2) {
+                    foto.src = "./images/bebe menina.webp";
+                } else if (idade > 2 && idade <= 10) {
+                    foto.src = "./images/menina.webp";
+                } else if (idade > 10 && idade <= 17) {
+                    foto.src = "./images/adolecente menina.jpg";
+                } else if (idade > 18 && idade <= 49) {
+                    foto.src = "./images/mulher adulto.jpg";
+                } else if (idade >= 50) {
+                    foto.src = "./images/idosa mulher.jpg";
+                }
+                foto.style.display = "block";
+            }
+    }
     </script>
 </body>
 
