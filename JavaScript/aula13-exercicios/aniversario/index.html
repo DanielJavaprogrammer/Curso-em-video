@@ -14,29 +14,35 @@
 
 <body>
     <div class="container" id="container">
-        <p>Ano de nascimento:
-            <input type="number" id="year">
-        </p>
-        <p>Sexo:
-            <input type="radio" id="masc" name="sex" checked>
-            <label for="masc">Masculino</label>
-            <input type="radio" id="femin" name="sex">
-            <label for="femin">Feminino</label>
-        </p>
-        <button onclick="checar()">Checar</button>
-        <section id="images"></section>
+        <label for="genM">Sexo: </label>
+        <input type="radio" name="gen" id="genM" value="Masculino"> Masculino
+        <input type="radio" name="gen" id="genF" value="Feminino"> Feminino
+        <input type="button" name="btn" id="btn" value="Enviar" onclick="Enviar()">
     </div>
 
-
+    <div id="result">
+        <div id="foto">
+            <img src="menino.webp" alt="fotoMenino">
+        </div>
+    </div>
     <script>
-        function checar() {
-            var current = new Date();
-            var fullAno = current.getFullYear();
-            var ano = document.getElementById("year");
-            var masc = document.getElementById("M");
-            var femin = document.getElementById("F");
-            var result = document.getElementById("images")
-
+        function Enviar(){
+            var res = document.getElementById("result")
+            var masc = document.getElementById("genM");
+            var fem = document.getElementById("genF")
+            var img = document.querySelector("img")
+            if (masc.checked){
+                res.innerHTML = "Menino";
+                img.src= "menina.webp"
+                img.style.display = "block"
+             
+            }else if(fem.checked){
+                res.innerHTML = "Menina"
+                img.src= "menina.avif"
+            }else{
+                alert("Selecione o sexo.")
+                res.style.fontWeight = "800"
+            }
         }
     </script>
 </body>
