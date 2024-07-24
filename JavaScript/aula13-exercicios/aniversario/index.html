@@ -11,20 +11,20 @@
 <body>
     <div class="container" id="container">
         <div class="year-select">
-            <label>Idade: </label>
+            <label>Ano de Nascimento: </label>
             <input type="number" name="age" id="age" placeholder=" xxxx">
         </div>
-    
+
         <div class="gender-select">
             <label for="genM">Sexo: </label>
             <input type="radio" name="gen" id="genM" value="Masculino"> Masculino
             <input type="radio" name="gen" id="genF" value="Feminino"> Feminino
         </div>
-    
+
         <div id="enviar">
             <input type="button" name="btn" id="btn" value="Enviar" onclick="Enviar()">
         </div>
-    
+
         <div id="result">
             <p> </p>
             <div id="foto">
@@ -32,22 +32,22 @@
             </div>
         </div>
     </div>
-    
+
 
     <script>
-        function Enviar(){
+        function Enviar() {
             var res = document.querySelector("#result p");
             var masc = document.getElementById("genM");
             var fem = document.getElementById("genF");
             var foto = document.querySelector("#foto img");
             var entAno = document.getElementById("age").value;
-            
+
             /*Pegar ano atual*/
             var data = new Date();
             var ano = data.getFullYear();
             var idade = (ano - entAno);
 
-            if(entAno <= 0 || entAno > ano){
+            if (entAno <= 0 || entAno > ano) {
                 alert("Ano digitado ou genero está incorreto. Revise e tente novamente.")
             }
 
@@ -80,7 +80,7 @@
                 }
                 foto.style.display = "block";
             }
-    }
+        }
     </script>
 </body>
 
