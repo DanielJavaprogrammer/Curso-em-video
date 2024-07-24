@@ -18,18 +18,12 @@ body {
 }
 
 #container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: aliceblue;
-    margin: auto;
-    max-width: 700px;
-    padding: 30px;
+    background-color: #fff;
+    padding: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2rem;
     border-radius: 5px;
     box-shadow: 2px 9px 10px rgba(0, 0, 0, 0.192);
+    
 }
 
 #foto {
@@ -45,26 +39,30 @@ img {
     display: none;
 }
 
-.year-select input {
-    border-radius: 4px;
-    border: .1px solid rgba(128, 128, 128, 0.37);
-    padding: 15px;
-    font-size: 2rem;
-    max-width: 150px;
+#result{
+    text-align: center;
+    padding: 10px;
 }
 
-#enviar input {
-    padding: 10px 30px;
-    font-size: 1.3rem;
-    margin: 5px;
+#result p{
+    padding-bottom: 10px;
+}
+
+#enviar {
+    width: 100%;
+}
+
+#enviar button {
+    width: 100%;
+    padding: 5px;
+    background-color: blue;
+    color: #fff;
     border: none;
-    border-radius: 10px;
-    background-color: rgb(117, 117, 201);
-    cursor: pointer;
-    font-weight: 500;
+    border-radius: 1px;
+    margin-top: 10px;
 }
 
-#enviar input:hover {
-    background-color: rgba(117, 117, 201, 0.593);
-
+label{
+    font-size: 1.2rem;
 }
+
