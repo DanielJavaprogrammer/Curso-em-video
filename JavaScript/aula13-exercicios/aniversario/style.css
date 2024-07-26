@@ -23,7 +23,21 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 5px;
     box-shadow: 2px 9px 10px rgba(0, 0, 0, 0.192);
-    
+    /* animation-name: levitar;
+    animation-timing-function: ease;
+    animation-duration: 3s ; */
+    animation: levitar .3s ease infinite;
+}
+
+@keyframes levitar {
+    0% {
+        transform: translateY(-20px);
+
+    }
+
+    100% {
+        transform: translateY(40px);
+    }
 }
 
 #foto {
@@ -39,12 +53,12 @@ img {
     display: none;
 }
 
-#result{
+#result {
     text-align: center;
     padding: 10px;
 }
 
-#result p{
+#result p {
     padding-bottom: 10px;
 }
 
@@ -62,7 +76,6 @@ img {
     margin-top: 10px;
 }
 
-label{
+label {
     font-size: 1.2rem;
 }
-
