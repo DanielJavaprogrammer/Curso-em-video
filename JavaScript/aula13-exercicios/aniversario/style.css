@@ -26,17 +26,21 @@ body {
     /* animation-name: levitar;
     animation-timing-function: ease;
     animation-duration: 3s ; */
-    animation: levitar .3s ease infinite;
+    animation: levitar 3s ease-in-out infinite;
 }
 
 @keyframes levitar {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(0px);
 
     }
 
-    100% {
-        transform: translateY(40px);
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0px);
     }
 }
 
