@@ -14,3 +14,5 @@ do {
     console.log("Bom dia!");
     a++;
 } while (a <= 6)
+
+    
