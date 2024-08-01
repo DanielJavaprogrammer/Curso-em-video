@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Dinâmica</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #taskInput {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        #addTaskBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #taskList li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .removeBtn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de Tarefas Dinâmica</h1>
+    <div id="taskContainer">
+        <input type="text" id="taskInput" placeholder="Digite uma nova tarefa...">
+        <button id="addTaskBtn">Adicionar Tarefa</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        document.getElementById('addTaskBtn').addEventListener('click', function () {
+            let taskInput = document.getElementById('taskInput'); // Obtém o campo de entrada
+            let taskValue = taskInput.value.trim(); // Obtém o valor da tarefa e remove espaços em branco
+
+            if (taskValue !== '') {
+                let taskList = document.getElementById('taskList'); // Obtém o elemento da lista
+
+                // Cria um novo elemento de lista (<li>)
+                let taskItem = document.createElement('li');
+                taskItem.textContent = taskValue;
+
+                // Cria um botão de remoção
+                let removeBtn = document.createElement('button');
+                removeBtn.textContent = 'Remover';
+                removeBtn.className = 'removeBtn';
+
+                // Adiciona o botão ao item da tarefa
+                taskItem.appendChild(removeBtn);
+
+                // Adiciona o item da tarefa à lista
+                taskList.appendChild(taskItem);
+
+                // Limpa o campo de entrada
+                taskInput.value = '';
+
+                // Adiciona um evento de clique ao botão de remoção
+                removeBtn.addEventListener('click', function () {
+                    taskList.removeChild(taskItem); // Remove o item da lista
+                });
+            } else {
+                alert('Por favor, digite uma tarefa válida.');
+            }
+        });
+    </script>
+</body>
+
+</html>

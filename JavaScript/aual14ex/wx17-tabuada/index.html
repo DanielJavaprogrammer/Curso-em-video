@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Tabuada</title>
+    <style>
+        body {
+            font-family: Poppins;
+
+        }
+
+        select {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Taboada Fácil</h1>
+    <div id="container">
+        <div class="form">
+            <label>Qual taboada você quer saber: </label>
+            <input type="number" id="tab" name="tabu">
+            <input type="button" value="Pronto" onclick="tabuada()">
+        </div>
+        <div id="result">
+            <select id="resultado" size="10">
+                <option>Tabuada aqui</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        function tabuada() {
+            let entrada = document.getElementById("tab").value; //Guarda o valor digitado da taboada solicitada;
+            let resposta = document.getElementById("resultado"); // Guarda a seção onde será dada a resposta da tabuada;
+            if (entrada.length == 0) {
+                alert("Digite um número.")
+            } else {
+                var num = Number(entrada);
+                resposta.innerHTML = ""
+
+                for (let c = 1; c <= 10; c++) {
+                    let item = document.createElement('option')
+                    item.text = `${num} x ${c} = ${num * c}`; // Define o texto do option
+                    resposta.appendChild(item);
+                };
+            }
+        }
+    </script>
+</body>
+
+</html>

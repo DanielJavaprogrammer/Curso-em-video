@@ -44,3 +44,7 @@ h1 {
 #form #btn:hover {
     background-color: rgba(140, 195, 201, 0.495);
 }
+
+p {
+    display: inline;
+}

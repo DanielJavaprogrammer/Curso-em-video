@@ -10,10 +10,16 @@ function contar() {
 
     if (passo1.length == 0 || passo2.length == 0 || passo3.length == 0) {
         alert("Erro. Faltam dados a ser digitados.");
-    } else {
-        for (let c = dado1; c <= dado2; += c) {
-            result.innerHTML = c; // Concatenando os valores com um espaço
+    } else if (dado1 < dado2) {
+        result.innerHTML = "Contando: ..."
+        for (var c = dado1; c <= dado2; c += dado3) {
+            result.innerHTML += `${c} <p>👉</p>`;
         }
-
+    } else {
+        result.innerHTML = "Contando: ..."
+        for (var c = dado1; c >= dado2; c -= dado3) {
+            result.innerHTML += `${c} <p>👉</p>`;
+        }
     }
+    result.innerHTML += `<p>🚩</p>`;
 }
