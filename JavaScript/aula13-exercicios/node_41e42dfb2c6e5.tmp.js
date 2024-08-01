@@ -2,7 +2,7 @@ var inicio = 1;
 var fim = 10
 var passos = 1;
 
-for (c = inicio; c <= fim; c++) {
+for (c = inicio; c <= fim; passos) {
     console.log(c)
 }
 
