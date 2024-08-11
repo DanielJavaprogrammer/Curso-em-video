@@ -11,6 +11,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             background-color: rgb(30, 30, 30);
             font-size: 1.5em;
             font-family: Arial, Helvetica, sans-serif;
@@ -39,9 +40,19 @@
             width: 30%;
             margin-top: 15px;
         }
+
+        h1{
+            color: #fff;
+        }
+
+        .result p{
+            font-size:16px;
+            display: inline;
+        }
     </style>
 </head>
 <body>
+    <h1>Calculando de contando</h1>
     <main id="container">
         <div class="form">
             <label>Inicio: </label>
@@ -63,14 +74,29 @@
             let ini = document.getElementById("ini").value;
             let fim = document.getElementById("fim").value;
             let pass = document.getElementById("passo").value;
+            let resultado = document.querySelector(".result p")
 
             let inicio = Number(ini);
             let final = Number(fim);
             let passo = Number(pass);
             
-            if (inicio.length == 0 || final.length == 0){
-                alert("Erro.")
+            if (ini.length == 0 || fim.length == 0 || pass.length == 0) {
+                alert("Dados faltando. Revise os dados.");
+            }else{
+                resultado.innerHTML = "Contando:";
+                if(inicio < fim){
+                    for(c = inicio; c <= fim; c += passo){
+                    resultado.innerHTML += `${c}<p>➡️</p>`;
+                    }
+                }
+                else{
+                    for(c = inicio; c >= fim; c -= passo){
+                    resultado.innerHTML += `${c}<p>➡️</p>`;
+                    }
+                }
+                resultado.innerHTML += `<p>🏁</p>`;
             }
+            
         })
     </script>
 </body>
