@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <title>Changing the Color</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "New Amsterdam", sans-serif;
+            display: flex;
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(34, 30, 34);
+            color: #fff;
+            border: 1px solid transparent;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: rgb(34, 30, 34);
+            border: 1px solid black;
+            transition: all .2s ease;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        #left-side {
+            width: 50%;
+            background-color: rgb(255, 255, 255);
+            height: 100vh;
+        }
+
+        #right-side {
+            width: 50%;
+            background-color: rgb(0, 0, 0);
+            height: 100vh;
+            color: #fff;
+            position: relative;
+        }
+
+        #right-side menu {
+            position: absolute;
+            width: 300px;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="left-side">
+        <h1 id="rosa">Rosa</h1>
+        <button class="btn" id="brosa">Mudar cor</button>
+        <h1 id="azul">Azul</h1>
+        <button class="btn" id="bazul">Mudar cor</button>
+        <h1 id="verde">Verde</h1>
+        <button class="btn" id="bverde">Mudar cor</button>
+        <h1 id="laranja">Laranja</h1>
+        <button class="btn" id="blaranja">Mudar cor</button>
+    </section>
+
+    <section id="right-side">
+        <div class="menu"></div>
+    </section>
+
+    <script>
+        document.getElementById("brosa").addEventListener("click", function () {
+            let rosa = document.getElementById("rosa");
+            if (rosa.style.color != "pink") {
+                rosa.style.color = "pink";
+            } else {
+                rosa.style.color = "black";
+            }
+        })
+
+        document.getElementById("bazul").addEventListener("click", function () {
+            let azul = document.getElementById("azul"); //Guardou o h1 de cor azul em "azul";
+            if (azul.style.color != "blue") { //Se a cor do texto for diferente de azul...
+                azul.style.color = "blue" // Então deixe ela azul
+            } else { // se não for...
+                azul.style.color = "black"; //...Deixe ela preto.
+            }
+        })
+
+        document.getElementById("bverde").addEventListener("click", function () {
+            let verde = document.getElementById("verde");
+            if (verde.style.color != "green") {
+                verde.style.color = "green";
+            } else {
+                verde.style.color = "black";
+            }
+
+        })
+
+        document.getElementById("blaranja").addEventListener("click", function () {
+            let laranja = document.getElementById("laranja");
+            if (laranja.style.color != "orange") {
+                laranja.style.color = "orange"
+            } else {
+                laranja.style.color = "black";
+            }
+
+        })
+    </script>
+</body>
+
+</html>
