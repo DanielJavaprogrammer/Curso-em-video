@@ -8,8 +8,8 @@ Tabela Condições IMC
  Entre 35,0 e 39,9 | Obesidade grau II (severa)
  Maior ou igual a 40 | Obesidade grau III (mórbida)*/
 
- var peso = 67;
- var altura = 1.59;
+ var peso = 86;
+ var altura = 1.74;
  var imc = peso / (altura * altura);
  console.log("Calculando IMC: ");
  console.log(imc.toFixed(2));
