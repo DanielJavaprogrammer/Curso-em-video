@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --dark: #2e2e2e;
+    --gray: #ddddddd5;
+}
+
+header {
+    background-color: var(--dark);
+    font-family: 'Roboto';
+    padding: 14px 5px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container>a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 30px;
+}
+
+.container .ativo {
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    color: var(--gray);
+}
+
+ul .subLinks {
+    display: none;
+}
+
+.menu li a:hover{
+    color: var(--white);
+    transition: all .2s ease-in-out;
+}
