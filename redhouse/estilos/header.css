@@ -11,18 +11,26 @@
     --gray: #ddddddd5;
 }
 
+body {
+    position: relative;
+}
+
 header {
     background-color: var(--dark);
     font-family: 'Roboto';
     padding: 14px 5px;
+    display: flex;
+    align-items: center;
+
 }
 
 .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.container>a {
+header>a {
     color: var(--white);
     text-decoration: none;
     font-size: 1.5em;
@@ -35,6 +43,7 @@ header {
 
 .menu {
     display: flex;
+    align-items: center;
     list-style-type: none;
     gap: 30px;
 }
@@ -49,7 +58,85 @@ ul .subLinks {
     display: none;
 }
 
-.menu li a:hover{
+.menu li a:hover {
     color: var(--white);
     transition: all .2s ease-in-out;
+}
+
+.icone {
+    display: flex;
+    padding: 2px;
+    background-color: grey;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.icone:hover {
+    background-color: transparent;
+}
+
+.icone i {
+    color: #fff;
+    font-size: 2em;
+}
+
+/* menu mobile */
+
+nav.menu-mobile {
+    position: absolute;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    display: none;
+}
+
+nav .bnt-fechar {
+    color: #fff;
+    font-size: 2em;
+    margin: 20px;
+}
+
+nav.menu-mobile ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 30px;
+
+}
+
+nav.menu-mobile a {
+    color: rgb(165, 87, 87);
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+ul .subLinks-mobile {
+    opacity: 0;
+    margin-top: 30px;
+}
+
+
+@media screen and (max-width: 860px) {
+    .icone {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .bottomIcone {
+        color: #fff;
+    }
 }

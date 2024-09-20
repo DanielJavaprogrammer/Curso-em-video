@@ -15,11 +15,12 @@
 
 <body>
     <header>
+        <a href="../codigo/inicio.html">Red House</a>
         <nav class="navegacao">
             <div class="container">
-                <a href="../codigo/inicio.html">Red House</a>
 
                 <ul class="menu">
+
                     <li>
                         <a href="../codigo/inicio.html" class="ativo" aria-current="page">Pagina Inicial</a>
                     </li>
@@ -56,9 +57,88 @@
                     </li>
                 </ul>
 
+                <div class="icone" id="menu-abrir">
+                    <i class="ph-thin ph-list"></i>
+                </div>
+
             </div>
         </nav>
     </header>
+    <nav class="menu-mobile">
+
+        <div class="bnt-fechar" id="fechar">
+            <i class="ph-thin ph-x-square"></i>
+        </div>
+
+        <ul>
+            <li>
+                <a href="../codigo/inicio.html" aria-current="page">Pagina Inicial</a>
+            </li>
+            <li>
+                <a href="#">Comunicados
+                </a>
+            </li>
+            <li>
+                <a href="#">Aniversariantes</a>
+            </li>
+            <li>
+                <a href="#">Saude</a>
+            </li>
+            <li>
+                <a href="#">Beneficios</a>
+            </li>
+            <li id="submenu">
+                <a href="#" class="link-sub-menu-mobile">Escolas
+                    <i class="ph-thin ph-caret-down bottomIcone"></i>
+                </a>
+                <ul class="subLinks-mobile">
+                    <li><a href="">Pacaembu</a></li>
+                    <li><a href="">Higienopolis</a></li>
+                    <li><a href="">Santana</a></li>
+                    <li><a href="">Villa Lobos</a></li>
+                    <li><a href="">Perdizes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelector("#submenu").addEventListener("click", function () {
+            const submenumobile = document.querySelector("ul .subLinks-mobile");
+
+            if (submenumobile.style.opacity != "1") {
+                submenumobile.style.opacity = "1";
+            } else {
+                submenumobile.style.opacity = "0";
+            }
+        })
+
+        document.querySelector("#menu-abrir").addEventListener("click", function () {
+            const abrirMenu = document.querySelector("nav.menu-mobile");
+
+            if (abrirMenu.style.display != "block") {
+                abrirMenu.style.display = "block"
+            }
+        })
+
+        // .document.querySelector("#fechar").addEventListener("click", function () {
+        //     const fecharMenu = document.querySelector("nav.menu-mobile");
+        //     alert("2")
+        //     // if (fecharMenu.style.display != "none") {
+        //     //     fecharMenu.style.display = "none"
+        //     // }
+        // })
+
+        document.querySelector("#fechar").addEventListener("click", function () {
+            const fecharMenu = document.querySelector("nav.menu-mobile");
+            alert("2");
+
+            // Verifica se o estilo 'display' é diferente de 'none' e o esconde
+            if (fecharMenu.style.display !== "none") {
+                fecharMenu.style.display = "none";
+            }
+        });
+    </script>
 </body>
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
