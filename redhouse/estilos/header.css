@@ -99,6 +99,7 @@ nav .bnt-fechar {
     color: #fff;
     font-size: 2em;
     margin: 20px;
+    cursor: pointer;
 }
 
 nav.menu-mobile ul {
@@ -107,19 +108,29 @@ nav.menu-mobile ul {
     flex-direction: column;
     list-style-type: none;
     gap: 30px;
-
 }
 
 nav.menu-mobile a {
-    color: rgb(165, 87, 87);
+    color: rgb(255, 223, 223);
     text-decoration: none;
     font-family: 'Roboto';
     font-weight: 500;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+nav.menu-mobile a:hover{
+    color: red;
 }
 
 ul .subLinks-mobile {
     opacity: 0;
     margin-top: 30px;
+    transition: all .5s ease;
+}
+
+ul .subLinks-mobile a{
+    font-size: 1rem;
 }
 
 
