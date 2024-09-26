@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <title>Testando Jquery</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+        body {
+            font-family: 'Fredoka';
+            font-size: 2rem;
+        }
+
+        ul {
+            transition: opacity 0.2s ease;
+            /* Transição suave para opacidade */
+            opacity: 1;
+        }
+
+        ul.hidden {
+            opacity: 0;
+            pointer-events: none;
+            /* Impede a interação quando escondido */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>
+            Melhores Frutas de São Paulo
+        </h1>
+    </div>
+
+    <div class="lista-de-frutas">
+        <ul>
+            <li>Manga</li>
+            <li>Maça</li>
+            <li>Laranja</li>
+            <li>Acerola</li>
+            <li>Pera</li>
+        </ul>
+    </div>
+
+    <div class="botao">
+        <button id="btn">Clique Aqui</button>
+    </div>
+
+    <script>
+        $("#btn").on("click", function () {
+            $("ul").toggleClass("hidden");
+        });
+
+        // metodo TOGGLECLASS: Adiciona e remove a classe. Caso a classe esteja desativada, ela ativa.. e se ativada, ela desativa.
+        //metodo TOGGLE(): Se o elemento estiver ativo, ele deixa "none". Se estiver "none", ele deixa ativo.
+    </script>
+</body>
+
+</html>
