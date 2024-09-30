@@ -8,7 +8,8 @@ var cores = [
 
 //Exemplo 1: utilizando um laço foreach
 //Criando um novo array para receber os nomes
-// var nomesCores = [];
+
+var nomesCores = [];
 
 //Percorrendo o array cores e atribuindo ao novo array os nomes
 cores.forEach(function (cor) {
