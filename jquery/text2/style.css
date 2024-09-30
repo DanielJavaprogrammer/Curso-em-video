@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Fredoka';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 69);
+}
+
+.title {
+    margin: 20px;
+}
+
+#add-task {
+    width: 100%;
+    text-align: center;
+}
+
+div input:first-child {
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid rgb(123, 213, 255);
+    width: 100%;
+    max-width: 500px;
+
+}
+
+
+div input:last-child {
+    padding: 10px;
+    background-color: rgb(123, 213, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+
+}
+
+div input:last-child:hover {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(123, 213, 255);
+    cursor: pointer;
+}
+
+.tasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 3px;
+}
+
+.tasks-list li {
+    background-color: rgb(123, 213, 255);
+    padding: 10px 20px;
+    list-style-type: none;
+    border-radius: 10px;
+    margin-bottom: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tasks-list li button {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: .7em;
+
+}
