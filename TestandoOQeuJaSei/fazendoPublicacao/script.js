@@ -1,5 +1,3 @@
-document.querySelector("#btnpostar").addEventListener("click", novaPublicacao);
-
 var tudo = document.querySelector("main");
 
 function novaPublicacao(usuario, setor, conteudo) {
