@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 1 com Armazenamento local</title>
+</head>
+<body>
+    
+    <div class="box">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+        <button type="button" id="enviar">Cadastrar</button>
+    </div>
+
+    <script>
+        let add = document.querySelector("#enviar");
+        add.addEventListener("click", ()=>{
+            let nome = document.getElementById("nome").value;
+            let email =  document.getElementById("email").value;
+
+            if(nome && email ){
+                localStorage.setItem("nome", nome);
+                localStorage.setItem("email", email);
+                alert("Cadastro realizado.")
+            }else{
+                alert("Preencha os campos, seu ze roela.")
+            }
+
+            document.getElementById("nome").value = ""
+            document.getElementById("email").value = ""
+        })
+
+        alert(localStorage.getItem("nome"))
+    </script>
+
+</body>
+</html>
