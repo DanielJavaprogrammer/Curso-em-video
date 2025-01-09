@@ -28,12 +28,8 @@ input {
     width: 100%;
     padding: 20px;
     border-radius: 10px;
-    overflow: none;
+    outline: none;
     border: 1px solid gray;
-}
-
-label {
-    margin: 10px 0;
 }
 
 button {
@@ -45,4 +41,34 @@ button {
     border: 1px solid gray;
     font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+/* Mensagem de erros do firmulario */
+p.errorName,
+p.errorEmail {
+    color: red;
+    font-size: .8rem;
+    font-style: italic;
+    width: 100%;
+    text-align: right;
+
+    display: none;
+}
+
+.inputnome,
+.inputemail {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputnome img,
+.inputemail img {
+    width: 30px;
+    position: absolute;
+    top: 32px;
+    right: 10px;
+
+    display: none;
+
 }
