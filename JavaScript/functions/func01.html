@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função 01</title>
+</head>
+<body>
+    <p id="blue" style="font-size: 2rem;">Blue</p>
+    <button id="btn_blue" >Change</button>
+    <p id="red" style="font-size: 2rem;">Red</p>
+    <button id="btn_red" >Change</button>
+    <p id="green" style="font-size: 2rem;">Green</p>
+    <button id="btn_green">Change</button>
+    <br>
+    <br>
+    <button id="clearAll">Clear All colors Styles</button>
+
+    <script>
+
+        const blue_text = document.getElementById('blue');
+        const red_text = document.getElementById('red');
+        const green_text = document.getElementById('green');
+       
+
+        function blue(text){
+            text.style.color = 'blue';
+        }
+
+        function red(text){
+            text.style.color = 'red';
+        }
+        
+        function green(text){
+            text.style.color = 'green';
+        }
+
+        /*Remove color style*/
+        function removeColor(item){
+            item.style.color = '';
+        }
+
+        
+        document.getElementById('btn_blue').addEventListener('click', ()=>{
+            if(blue_text.style.color != 'blue'){
+                blue(blue_text);
+            }
+           else{
+            removeColor(blue_text);
+           }
+        })
+        
+        document.getElementById('btn_red').addEventListener('click', ()=>{
+            if(red_text.style.color != 'red'){
+                red(red_text);
+            }
+            else{
+                removeColor(red_text);
+            }
+        })
+
+        document.getElementById('btn_green').addEventListener('click', ()=>{
+            if(green_text.style.color != 'green'){
+                green(green_text)
+            }
+            else{
+                removeColor(green_text);
+            }
+        });
+
+        /*Remove All color styles*/
+            document.getElementById('clearAll').addEventListener('click', ()=>{
+            if(blue_text.style.color != ''){
+                removeColor(blue_text);
+            }
+            if(red_text.style.color != ''){
+                removeColor(red_text);
+            }
+            if(green_text.style.color != ''){
+                removeColor(green_text);
+            }
+
+        })
+
+        /*document.getElementById('clearAll').addEventListener('click', () => {
+            [blue_text, red_text, green_text].forEach(removeColor);
+        });*/
+
+    </script>
+</body>
+</html>
